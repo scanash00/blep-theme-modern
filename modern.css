@@ -2403,6 +2403,23 @@ a:focus-visible,
 .layout-multiple-columns.layout-multiple-columns .columns-area > div:last-child {
   margin-inline-end: auto !important;
 }
+@media (min-width: 760px) {
+  .layout-multiple-columns.layout-multiple-columns .columns-area {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .layout-multiple-columns.layout-multiple-columns .columns-area > div {
+    margin-inline: 0 !important;
+  }
+  .layout-multiple-columns.layout-multiple-columns .columns-area > div:first-child,
+  .layout-multiple-columns.layout-multiple-columns .columns-area > div:last-child {
+    margin-inline-start: 0 !important;
+    margin-inline-end: 0 !important;
+  }
+  .layout-multiple-columns.layout-multiple-columns .columns-area__panels {
+    flex-direction: row-reverse;
+  }
+}
 .layout-multiple-columns.layout-multiple-columns .drawer.drawer {
   padding-top: 15px !important;
   overflow: clip;
