@@ -2417,12 +2417,16 @@ a:focus-visible,
   }
   .layout-multiple-columns.layout-multiple-columns .columns-area__panels {
     display: flex;
+    flex-direction: row-reverse;
   }
-  .layout-multiple-columns.layout-multiple-columns .columns-area__panels__pane--navigational {
-    order: 2;
+  .layout-multiple-columns.layout-multiple-columns .columns-area__panels__main {
+    order: 0;
+    flex: 1 1 auto;
   }
+  .layout-multiple-columns.layout-multiple-columns .columns-area__panels__pane--navigational,
   .layout-multiple-columns.layout-multiple-columns .columns-area__panels__pane--secondary {
-    order: -1;
+    order: 0;
+    flex: 0 0 auto;
   }
 }
 .layout-multiple-columns.layout-multiple-columns .drawer.drawer {
